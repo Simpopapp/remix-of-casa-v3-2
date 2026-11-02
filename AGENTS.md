@@ -33,6 +33,7 @@ Can you help me with the following actions:
 ## Arquitetura e Ambiente
 - Stack: TanStack Start v1 (React 19, Vite, roteamento file-based em `src/routes/`), Tailwind v4 em `src/styles.css`, shadcn/ui em `src/components/ui/`.
 - Backend: Lovable Cloud (Postgres + Auth + Storage). Clientes gerados em `src/integrations/supabase/` — nunca editar esses arquivos.
+- Schema changes must be applied through managed SQL migrations; generated client types must reflect the connected database, never a manually restored historical type file, because a remix may start with an empty backend.
 - Server functions moram em `src/lib/queries.ts` (leitura) e `src/lib/writes.ts` (escrita): pastas `server/` são bloqueadas pelo import-protection do template; nunca recriar `src/server/`.
 - Server functions autenticadas usam `.middleware([requireSupabaseAuth])`; o `functionMiddleware: [attachSupabaseAuth]` em `src/start.ts` anexa o bearer no cliente.
 - Escritas atômicas com RLS (ex.: criar lar + membro owner) vão para funções SQL `security definer` (ex.: `public.create_household`) — um INSERT com RETURNING falha enquanto o criador ainda não é membro da tabela.

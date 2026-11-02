@@ -2,6 +2,9 @@
 
 Estado do remix, fase a fase. Detalhe completo em `.opencode/roadmap-proj1.md`.
 
+- [x] Ativação Cloud: 19 tabelas protegidas recriadas, tipos regenerados, login por e-mail/Google/Lovable habilitado e cofre privado configurado; preview sem erros.
+- [x] Verificação após ativação: 89 testes passaram; login, criação de casa com Sala e leitura após recarregar confirmados no browser, sem erros; conta e casa temporárias removidas.
+
 - [x] Migrations recriadas vazias; banco do novo projeto verificado (schema íntegro, RLS ativa, sem dados)
 - [x] Gatilho de perfil recriado — signup volta a criar a ficha do morador
 - [x] Gates de fundação: typecheck limpo, testes verdes, casa com 7 cômodos navegável
