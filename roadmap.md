@@ -2,8 +2,8 @@
 
 Estado do remix, fase a fase. Detalhe completo em `.opencode/roadmap-proj1.md`.
 
-- [ ] Ativação Cloud: recriar schema ausente e regenerar tipos para corrigir erros do preview.
-- [ ] Verificar acesso aos dados e testes após ativação.
+- [x] Ativação Cloud: 19 tabelas protegidas recriadas, tipos regenerados, login por e-mail/Google/Lovable habilitado e cofre privado configurado; preview sem erros.
+- [x] Verificação após ativação: 89 testes passaram; login, criação de casa com Sala e leitura após recarregar confirmados no browser, sem erros; conta e casa temporárias removidas.
 
 - [x] Migrations recriadas vazias; banco do novo projeto verificado (schema íntegro, RLS ativa, sem dados)
 - [x] Gatilho de perfil recriado — signup volta a criar a ficha do morador
