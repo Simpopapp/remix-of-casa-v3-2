@@ -136,7 +136,7 @@ function GardenPage() {
         </div>
       )}
 
-      <main className="mx-auto max-w-5xl px-4 py-8">
+      <main id="conteudo" className="mx-auto max-w-5xl px-4 py-8">
         {isLoading ? (
           <p className="text-sm text-muted-foreground">Vendo o jardim…</p>
         ) : !household ? (

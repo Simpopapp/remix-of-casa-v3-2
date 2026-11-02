@@ -106,7 +106,7 @@ function ProvidersPage() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-5xl px-4 py-8">
+      <main id="conteudo" className="mx-auto max-w-5xl px-4 py-8">
         {isLoading ? (
           <p className="text-sm text-muted-foreground">Abrindo a agenda…</p>
         ) : !household ? (

@@ -112,7 +112,7 @@ function MoneyPage() {
     return (
       <div className="min-h-screen bg-background">
         <AppNav />
-        <main className="mx-auto max-w-md px-4 py-16 text-center">
+        <main id="conteudo" className="mx-auto max-w-md px-4 py-16 text-center">
           <h1 className="font-display text-3xl font-semibold text-foreground">
             Dinheiro da casa
           </h1>
@@ -146,7 +146,7 @@ function MoneyPage() {
         </p>
       </header>
 
-      <main className="mx-auto max-w-5xl space-y-6 px-4 py-8">
+      <main id="conteudo" className="mx-auto max-w-5xl space-y-6 px-4 py-8">
         {/* Custo real por mês */}
         <section className="rounded-3xl border border-border bg-card/70 p-6">
           <h2 className="flex items-center gap-2 font-display text-2xl font-semibold text-foreground">

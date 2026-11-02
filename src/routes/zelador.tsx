@@ -207,7 +207,7 @@ function ZeladorPage() {
         </p>
       </header>
 
-      <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-4 py-6">
+      <main id="conteudo" className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-4 py-6">
         {messages.length === 0 ? (
           <div className="rounded-3xl border border-dashed border-border bg-card/60 p-6 text-center">
             <MessagesSquare className="mx-auto text-muted-foreground" size={26} aria-hidden />
