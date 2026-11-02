@@ -146,12 +146,11 @@ Gates por fase: build verde + testes + verificação real (browser quando visual
 - Ainda pendente (bloqueio de ambiente, `no_supabase`): gates de browser
   das Fases 11 e 12 — verificar no preview com sessão.
 
-> Próximo remix (se este terminar antes): fechar a Fase 13 — passada de
-> micro-interações e acessibilidade + auditoria do monitor — e rodar os
-> gates de browser pendentes das Fases 11 e 12 (viewer com prazo só lê;
-> dossiê com histórico real), que exigem sessão no backend. Depois da
-> auditoria do monitor, o remix estará completo.
-> Fases 11 (carga mental) e 12 (momentos) concluídas em código neste remix.
+> Próximo remix (se este terminar antes): as 13 fases estão concluídas em
+> código. Restam apenas os gates de browser das Fases 11 e 12 (viewer com
+> prazo só lê; dossiê com histórico real), que exigem sessão no backend —
+> rodar no preview com sessão. Se passarem, o remix está integralmente
+> verificado.
 
 > Estado do banco pós-remix: schema íntegro e RLS ativa; funções `is_member`,
 > `can_write`, `create_household` e o gatilho de perfil restaurados em

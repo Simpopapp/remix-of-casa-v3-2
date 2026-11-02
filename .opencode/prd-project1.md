@@ -336,3 +336,15 @@ Cada rota com `head()` próprio (título, descrição, og — regras do template
   abre (`enabled: open`), para não pesar a navegação de quem nunca busca.
   meta/og por rota verificado em todas as 20 rotas. Restam a passada de
   micro-interações/acessibilidade e a auditoria do monitor (gate final).
+- 2026-11-02 — Fase 13 (acessibilidade): o tema escuro tinha quatro falhas
+  de contraste medidas (muted-foreground 2.94:1, primary 3.20:1, tranquilo
+  2.63:1 — AA exige 4.5:1). Decisão: corrigir subindo a luminância dos
+  tokens de fundo (`--primary` 0.683→0.745, `--tranquilo` 0.655→0.75) e do
+  texto secundário (`--muted-foreground` 0.702→0.775), preservando matiz e
+  croma para não descaracterizar a noite acolhedora. Foco visível global
+  ficou fora de camada no CSS para vencer `outline-none` sem `!important`;
+  skip link `#conteudo` no nav com `id` nas 15 páginas; `aria-current="page"`
+  via `activeProps` do TanStack Router. Cada regra tem teste em
+  `src/test/acessibilidade.test.ts`. Auditoria do monitor: runtime OpenCode
+  ausente neste sandbox — auditoria executada pelo agente principal no
+  formato do `monitor.md`, relatório em `.opencode/reports/fase-13-eval.md`.
