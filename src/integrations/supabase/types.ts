@@ -957,6 +957,7 @@ export type Database = {
       }
       is_member: { Args: { _household_id: string }; Returns: boolean }
       profiles_visible: { Args: { _user_id: string }; Returns: boolean }
+      storage_household_id: { Args: { _path: string }; Returns: string }
     }
     Enums: {
       asset_event_kind: "manutencao" | "reparo" | "substituicao" | "observacao"
