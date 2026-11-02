@@ -2,6 +2,9 @@
 
 Estado do remix, fase a fase. Detalhe completo em `.opencode/roadmap-proj1.md`.
 
+- [ ] Ativação Cloud: recriar schema ausente e regenerar tipos para corrigir erros do preview.
+- [ ] Verificar acesso aos dados e testes após ativação.
+
 - [x] Migrations recriadas vazias; banco do novo projeto verificado (schema íntegro, RLS ativa, sem dados)
 - [x] Gatilho de perfil recriado — signup volta a criar a ficha do morador
 - [x] Gates de fundação: typecheck limpo, testes verdes, casa com 7 cômodos navegável
