@@ -116,7 +116,7 @@ function RoomContent({ roomId }: { roomId: string }) {
         </div>
       </header>
 
-      <main className="mt-8 space-y-6">
+      <main id="conteudo" className="mt-8 space-y-6">
         {pulse.factors.length > 0 && (
           <section className="rounded-3xl border border-border bg-card/70 p-5">
             <h2 className="font-display text-xl font-semibold text-foreground">

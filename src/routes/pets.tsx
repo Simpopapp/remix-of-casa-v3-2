@@ -124,7 +124,7 @@ function PetsPage() {
         </Button>
       </header>
 
-      <main className="mx-auto max-w-5xl px-4 py-8">
+      <main id="conteudo" className="mx-auto max-w-5xl px-4 py-8">
         {isLoading ? (
           <p className="text-sm text-muted-foreground">Chamando a casa…</p>
         ) : !household ? (

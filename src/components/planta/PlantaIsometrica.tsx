@@ -86,7 +86,7 @@ export function PlantaIsometrica({ rooms, pulses }: PlantaIsometricaProps) {
             role="link"
             tabIndex={0}
             aria-label={`Abrir ${room.name} — pulso ${levelLabel}`}
-            className="cursor-pointer outline-none transition-transform duration-300 hover:-translate-y-1.5 focus-visible:-translate-y-1.5"
+            className="cursor-pointer transition-transform duration-300 hover:-translate-y-1.5 focus-visible:-translate-y-1.5"
             onClick={() => open(room)}
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === " ") {

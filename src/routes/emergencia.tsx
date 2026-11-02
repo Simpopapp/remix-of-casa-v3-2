@@ -63,7 +63,7 @@ function EmergencyPage() {
 
   if (isLoading) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-background px-4">
+      <main id="conteudo" className="flex min-h-screen items-center justify-center bg-background px-4">
         <p className="text-base text-muted-foreground sm:text-lg">Abrindo o registro de emergência…</p>
       </main>
     );
@@ -132,7 +132,7 @@ function EmergencyPage() {
 
   if (!household) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center gap-6 bg-background px-4 text-center">
+      <main id="conteudo" className="flex min-h-screen flex-col items-center justify-center gap-6 bg-background px-4 text-center">
         <p className="font-display text-3xl font-semibold text-foreground sm:text-4xl">
           Modo emergência
         </p>
@@ -151,7 +151,7 @@ function EmergencyPage() {
   }
 
   return (
-    <main className="min-h-screen bg-background pb-16">
+    <main id="conteudo" className="min-h-screen bg-background pb-16">
       <header className="border-b-2 border-foreground/15 px-4 py-6 sm:px-8">
         <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-4">
           <div>

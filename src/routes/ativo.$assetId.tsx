@@ -190,7 +190,7 @@ function AssetContent({ assetId }: { assetId: string }) {
         </div>
       </header>
 
-      <main className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+      <main id="conteudo" className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <section className="space-y-6">
           <div className="rounded-3xl border border-border bg-card/70 p-5">
             <h2 className="font-display text-xl font-semibold text-foreground">

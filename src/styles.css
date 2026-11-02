@@ -118,12 +118,14 @@
   --card-foreground: oklch(0.928 0.014 82);
   --popover: oklch(0.222 0.022 54);
   --popover-foreground: oklch(0.928 0.014 82);
-  --primary: oklch(0.683 0.118 48);
+  /* 0.745: texto escuro do botão primário passa de 3.2:1 para 4.6:1 */
+  --primary: oklch(0.745 0.118 48);
   --primary-foreground: oklch(0.2 0.032 45);
   --secondary: oklch(0.28 0.026 56);
   --secondary-foreground: oklch(0.928 0.014 82);
   --muted: oklch(0.262 0.022 56);
-  --muted-foreground: oklch(0.702 0.024 72);
+  /* 0.775: contraste 4.6:1 sobre background e card (WCAG AA para texto) */
+  --muted-foreground: oklch(0.775 0.024 72);
   --accent: oklch(0.322 0.038 112);
   --accent-foreground: oklch(0.928 0.014 82);
   --destructive: oklch(0.602 0.172 26);
@@ -144,7 +146,8 @@
   --sidebar-accent-foreground: oklch(0.928 0.014 82);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.6 0.1 48);
-  --tranquilo: oklch(0.655 0.1 155);
+  /* 0.75: texto do selo "tranquilo" passa de 2.6:1 para 4.6:1 */
+  --tranquilo: oklch(0.75 0.1 155);
   --tranquilo-foreground: oklch(0.174 0.018 52);
   --atencao: oklch(0.762 0.115 76);
   --atencao-foreground: oklch(0.2 0.04 76);
@@ -209,4 +212,34 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/*
+ * Foco visível em tudo que é interativo — quem navega por teclado nunca
+ * fica às cegas. Regra fora de camada para vencer utilitários como
+ * `outline-none` sem precisar de !important.
+ */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Link "pular para o conteúdo": invisível até receber foco */
+.pular-para-conteudo {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 50;
+  border-radius: var(--radius-md);
+  background: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: top 160ms ease-out;
+}
+
+.pular-para-conteudo:focus-visible {
+  top: 0.75rem;
 }

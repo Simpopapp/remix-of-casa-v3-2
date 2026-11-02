@@ -72,7 +72,7 @@ function MomentsPage() {
         </p>
       </header>
 
-      <main className="mx-auto max-w-5xl px-4 py-8">
+      <main id="conteudo" className="mx-auto max-w-5xl px-4 py-8">
         {isLoading ? (
           <p className="text-sm text-muted-foreground">Reunindo a casa inteira…</p>
         ) : !data?.household ? (

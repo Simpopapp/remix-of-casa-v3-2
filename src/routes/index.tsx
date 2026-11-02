@@ -153,7 +153,7 @@ function Home() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-5xl px-4 py-8">
+      <main id="conteudo" className="mx-auto max-w-5xl px-4 py-8">
         {rooms.length === 0 ? (
           <div className="rounded-3xl border border-dashed border-border bg-card/60 p-10 text-center">
             <h2 className="font-display text-2xl font-semibold text-foreground">

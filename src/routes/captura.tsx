@@ -159,7 +159,7 @@ function CapturaPage() {
         </p>
       </header>
 
-      <main className="mx-auto max-w-5xl px-4 py-8">
+      <main id="conteudo" className="mx-auto max-w-5xl px-4 py-8">
         <section className="rounded-3xl border border-border bg-card p-5 shadow-sm">
           <Textarea
             value={text}

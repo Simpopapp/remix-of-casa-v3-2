@@ -126,21 +126,31 @@ Gates por fase: build verde + testes + verificação real (browser quando visual
 - Pendente de verificação: gate de browser (dossiê com histórico real) idem
   Fase 11 — sem acesso ao backend neste sandbox.
 
-## Fase 13 — Polimento e gates finais (parcial, 2026-11-02)
+## Fase 13 — Polimento e gates finais ✅ (2026-11-02)
 - [x] Busca universal (cmdk): paleta ⌘K/Ctrl+K no nav (`command-palette.tsx`)
   com índice do servidor (`getSearchIndex`): cômodos, objetos, documentos,
   obrigações e prestadores, cada um levando ao seu lugar.
 - [x] meta/og por rota: verificado — todas as 20 rotas têm `head()` próprio.
-- [ ] Micro-interações, acessibilidade (foco, contraste, reduced-motion)
+- [x] Micro-interações, acessibilidade (foco, contraste, reduced-motion)
 - Gates: passada completa + auditoria do monitor; navegável sem esboços.
-- Evidência parcial: 82 testes verdes, tsgo limpo, build OK após a paleta.
+- Evidência: 89 testes verdes (7 novos em `src/test/acessibilidade.test.ts`),
+  tsgo limpo, build OK. Contraste do tema escuro medido e corrigido:
+  muted-foreground 2.94→4.64, primary 3.20→4.62, tranquilo 2.63→4.61 (AA).
+  Foco visível global (`:focus-visible` com `--ring`, fora de camada),
+  skip link `#conteudo` nas 15 páginas, `aria-current="page"` na nav.
+  Playwright em `/entrar`: anel de 2px computado no botão focado por
+  teclado, regra servida no CSS, zero erros de console.
+- Auditoria do monitor: o runtime OpenCode não está instalado neste sandbox
+  (binário ausente); a auditoria foi feita pelo agente principal no formato
+  do `monitor.md` e registrada em `.opencode/reports/fase-13-eval.md`.
+- Ainda pendente (bloqueio de ambiente, `no_supabase`): gates de browser
+  das Fases 11 e 12 — verificar no preview com sessão.
 
-> Próximo remix (se este terminar antes): fechar a Fase 13 — passada de
-> micro-interações e acessibilidade + auditoria do monitor — e rodar os
-> gates de browser pendentes das Fases 11 e 12 (viewer com prazo só lê;
-> dossiê com histórico real), que exigem sessão no backend. Depois da
-> auditoria do monitor, o remix estará completo.
-> Fases 11 (carga mental) e 12 (momentos) concluídas em código neste remix.
+> Próximo remix (se este terminar antes): as 13 fases estão concluídas em
+> código. Restam apenas os gates de browser das Fases 11 e 12 (viewer com
+> prazo só lê; dossiê com histórico real), que exigem sessão no backend —
+> rodar no preview com sessão. Se passarem, o remix está integralmente
+> verificado.
 
 > Estado do banco pós-remix: schema íntegro e RLS ativa; funções `is_member`,
 > `can_write`, `create_household` e o gatilho de perfil restaurados em
